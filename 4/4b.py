@@ -40,7 +40,7 @@ def validate(single_passport):
             else:
                 vflag = False
 
-        hcl_re = re.match('#[0-9a-f]', single_passport['hcl'])
+        hcl_re = re.match('#[0-9a-f]{6}', single_passport['hcl'])
 
         if hcl_re is None:
             vflag = False
